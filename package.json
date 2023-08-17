@@ -1,0 +1,33 @@
+{
+  "name": "super-vector-generator",
+  "version": "0.0.1",
+  "description": "Super Vector Generator(SVG) is a SVG LOGO Generator is a NODE.js CLI that will create a .svg logo from provided prompts and responses.",
+  "main": "index.js",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shindekokoro/super-vector-generator.git"
+  },
+  "keywords": [
+    "svg",
+    "node.js",
+    "logo",
+    "cli"
+  ],
+  "author": "Brian Whisler",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/shindekokoro/super-vector-generator/issues"
+  },
+  "homepage": "https://github.com/shindekokoro/super-vector-generator#readme",
+  "dependencies": {
+    "git-a-readme": "^1.2.0",
+    "inquirer": "^9.2.10",
+    "jest": "^29.6.2"
+  }
+}
