@@ -48,7 +48,6 @@ ${this.openSVG}
 ${this.closeSVG}
 `;
     }
-
 }
 
 class Circle extends Shape {
@@ -76,10 +75,10 @@ class Square extends Shape {
         // Square Variables
         const width = 150;
         const height = width;
-        const x = (this.logoWidth - width) / 2
-        const y = (this.logoHeight - height) / 2
+        const x = (this.logoWidth - width) / 2;
+        const y = (this.logoHeight - height) / 2;
 
-        this.openTag = `<rect x="${x}" y="${y}" width="${width}" height="${height}"`
+        this.openTag = `<rect x="${x}" y="${y}" width="${width}" height="${height}"`;
         this.shape = this.render();
     }
 }

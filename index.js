@@ -15,7 +15,7 @@ const isNoMoreThan3 = async (input) => {
 // Write File to file system
 function writeToFile(fileName, content) {
     fs.writeFile(fileName, content, (error) => {
-        error ? console.error(error) : console.log(`Generated ${fileName}`)
+        error ? console.error(error) : console.log(`Generated ${fileName}`);
     })
 }
 
@@ -47,9 +47,7 @@ async function init() {
             type: 'confirm',
             name: 'continue',
             message: (answers) => `Does this looks correct?\n\t${answers.shapeColor} ${answers.shape}\n\t${answers.textColor} ${answers.text}`
-
         }
-
     ]
 
     async function askQuestions() {
@@ -80,10 +78,10 @@ async function init() {
                     console.error('Unknown shape selected, should not be here.');
                     break;
             }
-            shape.setText(answers.text, answers.textColor)
+            shape.setText(answers.text, answers.textColor);
             shape.setColor(answers.shapeColor);
 
-            writeToFile('logo.svg', shape.createLogo())
+            writeToFile('logo.svg', shape.createLogo());
         })
 }
 
