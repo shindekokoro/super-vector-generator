@@ -1,0 +1,5 @@
+<?xml version="1.0" standalone="no"?>
+<svg width="300" height="200" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <polygon points="150, 18 244, 182 56, 182" fill="green" />
+    <text x="150" y="155" font-size="60" dominant-baseline="middle" text-anchor="middle" fill="yellow">KEI</text>
+</svg>
