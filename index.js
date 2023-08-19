@@ -34,6 +34,13 @@ async function init() {
         },
         {
             type: 'list',
+            name: 'fontFamily',
+            message: 'Is there a font family you would like to have for the text in your LOGO?',
+            choices: ['serif', 'sans-serif', 'monospace', 'cursive', 'fantasy', 'system-ui', 'ui-serif', 'ui-sans-serif', 'ui-monospace', 'ui-rounded', 'emoji', 'math', 'fangsong'],
+            default: 'system-ui'
+        },
+        {
+            type: 'list',
             name: 'shape',
             message: 'Choose from a shape to display on your logo:',
             choices: ['Circle', 'Triangle', 'Square']
@@ -46,7 +53,7 @@ async function init() {
         {
             type: 'confirm',
             name: 'continue',
-            message: (answers) => `Does this looks correct?\n\t${answers.shapeColor} ${answers.shape}\n\t${answers.textColor} ${answers.text}`
+            message: (answers) => `Does this looks correct?\n\t${answers.shapeColor} ${answers.shape}\n\t${answers.textColor} ${answers.text} in ${answers.fontFamily}`
         }
     ]
 
@@ -78,7 +85,7 @@ async function init() {
                     console.error('Unknown shape selected, should not be here.');
                     break;
             }
-            shape.setText(answers.text, answers.textColor);
+            shape.setText(answers.text, answers.textColor, answers.fontFamily);
             shape.setColor(answers.shapeColor);
 
             writeToFile('logo.svg', shape.createLogo());

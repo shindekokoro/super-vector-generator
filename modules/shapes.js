@@ -26,11 +26,11 @@ class Shape {
     }
 
     // Set Text to LOGO
-    setText(text, color, size = 60) {
-        let openTag = `<text x="${this.textX}" y="${this.textY}" font-size="${size}" dominant-baseline="${this.textBaseline}" text-anchor="middle" fill="${color.toLowerCase()}">`
+    setText(text, color, fontFamily, size = 60) {
+        let openTag = `<text x="${this.textX}" y="${this.textY}" font-size="${size}" font-family="${fontFamily}" dominant-baseline="${this.textBaseline}" text-anchor="middle" fill="${color.toLowerCase()}">`
         let closeTag = `</text>`
 
-        this.text = `${openTag}${text.toUpperCase()}${closeTag}`
+        this.text = `${openTag}\n\t\t${text.toUpperCase()}\n\t${closeTag}`
     }
 
     // Return Shape Tag for SVG Logo
