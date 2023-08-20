@@ -1,16 +1,7 @@
 const fs = require('fs');
 const inquirer = require('inquirer');
 
-const { Circle, Triangle, Square } = require('./modules/shapes');
-
-
-const isNoMoreThan3 = async (input) => {
-    if (input.length > 3) {
-        return 'You have entered more than 3 characters.';
-    } else {
-        return true;
-    }
-}
+const { Circle, Triangle, Square, Heart, Star } = require('./modules/shapes');
 
 // Write File to file system
 function writeToFile(fileName, content) {
@@ -20,11 +11,29 @@ function writeToFile(fileName, content) {
 }
 
 async function init() {
+    const isNoMoreThan3 = async (input) => {
+        if (input.length > 3) {
+            return 'You have entered more than 3 characters.';
+        } else {
+            return true;
+        }
+    }
+
+    // Confirm Questions/Answers Function for formatting and readability
+    const confirmQuestions = (input) => {
+        let shapeColor = input.shapeColor ? input.shapeColor + ' ' : '';
+        let textColor = input.textColor ? input.textColor + ' ' : '';
+        let fontFamily = input.fontFamily ? ' in ' + input.fontFamily : '';
+        return `Does this looks correct?
+    ${shapeColor}${input.shape}
+    ${textColor}${input.text}${fontFamily}`;
+    }
+
     let questions = [
         {
             type: 'input',
             name: 'text',
-            message: 'What would you like the text on your LOGO to be?',
+            message: 'What should the text on your LOGO be?',
             validate: await isNoMoreThan3
         },
         {
@@ -36,14 +45,13 @@ async function init() {
             type: 'list',
             name: 'fontFamily',
             message: 'Is there a font family you would like to have for the text in your LOGO?',
-            choices: ['serif', 'sans-serif', 'monospace', 'cursive', 'fantasy', 'system-ui', 'ui-serif', 'ui-sans-serif', 'ui-monospace', 'ui-rounded', 'emoji', 'math', 'fangsong'],
-            default: 'system-ui'
+            choices: ['', 'serif', 'sans-serif', 'monospace', 'cursive', 'fantasy', 'system-ui', 'ui-serif', 'ui-sans-serif', 'ui-monospace', 'ui-rounded', 'emoji', 'math', 'fangsong'],
         },
         {
             type: 'list',
             name: 'shape',
             message: 'Choose from a shape to display on your logo:',
-            choices: ['Circle', 'Triangle', 'Square']
+            choices: ['Circle', 'Triangle', 'Square', 'Heart', 'Star']
         },
         {
             type: 'input',
@@ -53,7 +61,7 @@ async function init() {
         {
             type: 'confirm',
             name: 'continue',
-            message: (answers) => `Does this looks correct?\n\t${answers.shapeColor} ${answers.shape}\n\t${answers.textColor} ${answers.text} in ${answers.fontFamily}`
+            message: confirmQuestions
         }
     ]
 
@@ -80,6 +88,12 @@ async function init() {
                     break;
                 case 'Square':
                     shape = new Square();
+                    break;
+                case 'Heart':
+                    shape = new Heart();
+                    break;
+                case 'Star':
+                    shape = new Star();
                     break;
                 default:
                     console.error('Unknown shape selected, should not be here.');
