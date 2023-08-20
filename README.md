@@ -1,7 +1,6 @@
 # super-vector-generator
 
-<img alt="SVG LOGO Example" src="./examples/svg-logo.svg" width="200px">
-<img alt="SVG Triangle LOGO Example" src="./examples/tri-logo.svg" width="200px">
+<img alt="SVG LOGO Example" src="./examples/svg-logo.svg" width="200px" /> <img alt="SVG Triangle LOGO Example" src="./examples/tri-logo.svg" width="200px" />
 
 ## Description
 Super Vector Generator(SVG) is a SVG LOGO Generator is a NODE.js CLI that will create a .svg logo from provided prompts and responses.
@@ -15,10 +14,11 @@ Super Vector Generator(SVG) is a SVG LOGO Generator is a NODE.js CLI that will c
 - [Questions](#questions)
 
 ## Installation
-`npm i -g super-vector-generator`
+`npm i super-vector-generator`
 
 ## Usage
-`npm run super-vector-generator`
+- If `super-vector-generator` is in the root directory of your project type `npm start` into the terminal and then follow the prompts to create a LOGO.
+- If `super-vector-generator` is in your `node_modules` folder from npm install type: `node node_modules/super-vector-generator/index.js` and follow the prompts from there.
 
 ## Preview
 [YouTube Link](https://youtube.com)
