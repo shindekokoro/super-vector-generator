@@ -1,5 +1,7 @@
 # super-vector-generator
 
+[![License](https://img.shields.io/github/license/shindekokoro/super-vector-generator)](http://choosealicense.com/licenses/mit/)
+
 <img alt="SVG LOGO Example" src="./examples/svg-logo.svg" width="200px" /> <img alt="SVG Triangle LOGO Example" src="./examples/tri-logo.svg" width="200px" />
 
 ## Description
