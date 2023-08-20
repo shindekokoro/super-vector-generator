@@ -19,12 +19,12 @@ Super Vector Generator(SVG) is a SVG LOGO Generator is a NODE.js CLI that will c
 ## Usage
 1. `cd super-vector-generator`
 2. `npm install`
-3. `npm start` 
+3. `npm start`
 
 ## Preview
 [YouTube Link](https://youtu.be/aYiW-hqJolg)
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/aYiW-hqJolg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+[![YouTube Preview](./preview.png)](https://youtu.be/aYiW-hqJolg)
 
 ## License
 [MIT](http://choosealicense.com/licenses/mit/)
