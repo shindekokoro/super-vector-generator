@@ -27,7 +27,6 @@
   },
   "homepage": "https://github.com/shindekokoro/super-vector-generator#readme",
   "dependencies": {
-    "git-a-readme": "^1.2.0",
     "inquirer": "^8.2.4",
     "jest": "^29.6.2"
   }
