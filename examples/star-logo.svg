@@ -1,0 +1,7 @@
+<?xml version="1.0" standalone="no"?>
+<svg width="300" height="200" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <polygon points="202,190 50,80 238,80 86,190 144,10" fill="orange" />
+    <text x="145" y="120" font-size="40" font-family="monospace"  dominant-baseline="auto" text-anchor="middle" fill="blue">
+		SPI
+	</text>
+</svg>
