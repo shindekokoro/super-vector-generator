@@ -1,6 +1,7 @@
 # super-vector-generator
 
-[![License](https://img.shields.io/github/license/shindekokoro/super-vector-generator)](http://choosealicense.com/licenses/mit/)
+<img alt="SVG LOGO Example" src="./examples/svg-logo.svg" width="200px">
+<img alt="SVG Triangle LOGO Example" src="./examples/tri-logo.svg" width="200px">
 
 ## Description
 Super Vector Generator(SVG) is a SVG LOGO Generator is a NODE.js CLI that will create a .svg logo from provided prompts and responses.
@@ -8,11 +9,19 @@ Super Vector Generator(SVG) is a SVG LOGO Generator is a NODE.js CLI that will c
 ## Table of Contents
 - [Description](#description)
 - [Installation](#installation)
+- [Usage](#usage)
+- [Preview](#preview)
 - [License](#license)
 - [Questions](#questions)
 
 ## Installation
-`node index.js`
+`npm i -g super-vector-generator`
+
+## Usage
+`npm run super-vector-generator`
+
+## Preview
+[YouTube Link](https://youtube.com)
 
 ## License
 [MIT](http://choosealicense.com/licenses/mit/)
