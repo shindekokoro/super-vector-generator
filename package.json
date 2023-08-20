@@ -1,6 +1,6 @@
 {
   "name": "super-vector-generator",
-  "version": "0.0.1",
+  "version": "0.9.1",
   "description": "Super Vector Generator(SVG) is a SVG LOGO Generator is a NODE.js CLI that will create a .svg logo from provided prompts and responses.",
   "main": "index.js",
   "directories": {
