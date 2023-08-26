@@ -34,13 +34,16 @@ class Shape {
         let openTag = `<text x="${this.textX}" y="${this.textY}" font-size="${this.fontSize}" ${this.fontFamily} dominant-baseline="${this.textBaseline}" text-anchor="middle"${this.fontFill}>`
         let closeTag = `</text>`
 
-        return this.text = `${openTag}\n\t\t${text.toUpperCase()}\n\t${closeTag}`
+        this.text = `${openTag}\n\t\t${text.toUpperCase()}\n\t${closeTag}`
     }
 
     // Return Shape Tag for SVG Logo
     render() {
-        this.shape = `${this.openTag}${this.color}${this.closeTag}`;
-        return this.shape;
+        return `${this.openTag}${this.color}${this.closeTag}`;
+    }
+
+    renderText() {
+        return this.text;
     }
 
     // Return full SVG LOGO Output
@@ -49,7 +52,7 @@ class Shape {
         return `${this.xml}
 ${this.openSVG}
     ${this.render()}
-    ${this.text}
+    ${this.renderText()}
 ${this.closeSVG}
 `;
     }
